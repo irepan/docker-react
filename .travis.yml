@@ -1,0 +1,9 @@
+sudo: required
+swervices:
+  - docker
+
+before_install:
+  - docker build -t irepan/docker-react -f Dockerfile.dev .
+
+scrip:
+  - docker run irepan/docker-react npm run test -- --coverage
