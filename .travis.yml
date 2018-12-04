@@ -5,5 +5,5 @@ swervices:
 before_install:
   - docker build -t irepan/docker-react -f Dockerfile.dev .
 
-scrip:
+script:
   - docker run irepan/docker-react npm run test -- --coverage
